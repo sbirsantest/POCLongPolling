@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32106.194
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LongPollingServer", "LongPollingServer\LongPollingServer.csproj", "{076C7887-2359-4081-86F2-1B05B490A825}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LongPollingServer", "LongPollingServer\LongPollingServer.csproj", "{076C7887-2359-4081-86F2-1B05B490A825}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LongPollingClientConsoleApp", "LongPollingClientConsoleApp\LongPollingClientConsoleApp.csproj", "{FA9539F3-3891-4039-8D8E-89DB610E6628}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{076C7887-2359-4081-86F2-1B05B490A825}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{076C7887-2359-4081-86F2-1B05B490A825}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{076C7887-2359-4081-86F2-1B05B490A825}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA9539F3-3891-4039-8D8E-89DB610E6628}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA9539F3-3891-4039-8D8E-89DB610E6628}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA9539F3-3891-4039-8D8E-89DB610E6628}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA9539F3-3891-4039-8D8E-89DB610E6628}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
