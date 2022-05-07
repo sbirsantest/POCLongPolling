@@ -13,8 +13,6 @@ namespace LongPollingClientConsoleApp
             var testLongPolling = ActivatorUtilities.CreateInstance<TestLongPolling>(host.Services);
             var orderNumber = "123";
             Console.WriteLine(await testLongPolling.GetStatusAsync(orderNumber));
-
-            //await testPrinter.SetStatusAsync(orderNumber, "pickedup");
             Console.ReadKey();
         }
 

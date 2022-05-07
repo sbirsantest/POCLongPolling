@@ -9,8 +9,5 @@ namespace LongPollingClientConsoleApp
     public interface ITestLongPolling
     {
         Task<string> GetStatusAsync(string orderNumber);
-
-        //Task SetStatusAsync(string orderNumber, string status);
-
     }
 }
