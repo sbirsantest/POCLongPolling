@@ -12,10 +12,13 @@ namespace LongPollingServer
         private static List<LongPolling> s_Subscribers = new List<LongPolling>();
 
         private TaskCompletionSource<bool> _taskCompletion = new TaskCompletionSource<bool>();
-
         private string OrderNumber { get; set; }
         private string Status { get; set; }
 
+        /// <summary>
+        /// initiate a long polling for an order with given orderNumber
+        /// </summary>
+        /// <param name="orderNumber"></param>
         public LongPolling(string orderNumber)
         {
             OrderNumber = orderNumber;
@@ -25,12 +28,20 @@ namespace LongPollingServer
             }
         }
 
+        /// <summary>
+        /// 'event' to set the status
+        /// </summary>
+        /// <param name="status"></param>
         private void Notify(string status)
         {
             Status = status;
             _taskCompletion.SetResult(true);
         }
 
+        /// <summary>
+        /// get the status of the order with the orderNumber (of the initialized long polling)
+        /// </summary>
+        /// <returns></returns>
         public async Task<string> GetStatusAsync()
         {
             await Task.WhenAny(_taskCompletion.Task, Task.Delay(Timeout));
@@ -41,6 +52,11 @@ namespace LongPollingServer
             return Status;
         }
 
+        /// <summary>
+        /// to simulate a status change for an order with the given orderNumber 
+        /// </summary>
+        /// <param name="orderNumber"></param>
+        /// <param name="status"></param>
         public static void SetStatus(string orderNumber, string status)
         {
             lock (s_Subscribers)
